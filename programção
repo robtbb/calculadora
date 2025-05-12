@@ -1,0 +1,136 @@
+si la
+Claro! Vamos detalhar **cada componente** usado nos exemplos de programação para a Casio fx-9750GII, explicando o que cada linha e símbolo faz. Vou me basear nos dois exemplos principais: **área do triângulo** e **Bhaskara**.
+
+---
+
+## 🧱 COMPONENTES BÁSICOS DO PROGRAMA
+
+### 1. `"TEXTO" ? → VARIÁVEL`
+
+**Exemplo:**
+
+```basic
+"BASE="?→B
+```
+
+**Explicação:**
+
+* `"BASE="` → Mostra na tela o texto **BASE=**.
+* `?` → A calculadora espera o usuário digitar um número.
+* `→B` → O valor digitado é armazenado na variável **B**.
+* `→` é o símbolo **store** (armazenar), inserido com **\[SHIFT] + \[RCL]**.
+
+---
+
+### 2. `VARIÁVEL1 × VARIÁVEL2 / 2 → VARIÁVEL`
+
+**Exemplo:**
+
+```basic
+(B×H)/2→A
+```
+
+**Explicação:**
+
+* Multiplica a base (**B**) pela altura (**H**).
+* Divide o resultado por 2.
+* Armazena o valor na variável **A** (área).
+* Parênteses garantem a ordem correta das operações.
+
+---
+
+### 3. `"TEXTO"; VARIÁVEL`
+
+**Exemplo:**
+
+```basic
+"ÁREA=";A
+```
+
+**Explicação:**
+
+* Mostra o texto **"ÁREA="** seguido do valor armazenado em **A**.
+* O ponto e vírgula `;` junta (concatena) texto com número.
+* A saída será algo como: `ÁREA=25`
+
+---
+
+### 4. `If`, `Then`, `Else`, `IfEnd`
+
+**Exemplo (Bhaskara):**
+
+```basic
+If D<0
+Then
+"SEM RAIZES REAIS"
+Else
+(-B+√D)/(2×A)→X1
+(-B-√D)/(2×A)→X2
+"X1=";X1
+"X2=";X2
+IfEnd
+```
+
+**Explicação:**
+
+* `If D<0` → Se o valor de D for menor que 0 (não há raiz real)...
+* `Then` → Executa o que estiver abaixo.
+* `"SEM RAIZES REAIS"` → Mostra uma mensagem.
+* `Else` → Se **não** for menor que 0, calcula as raízes.
+* `IfEnd` → Finaliza a condição.
+
+---
+
+### 5. `√D`
+
+**Exemplo:**
+
+```basic
+(-B+√D)/(2×A)
+```
+
+**Explicação:**
+
+* `√D` calcula a **raiz quadrada** de D.
+* Está sendo usado na **fórmula de Bhaskara**.
+
+---
+
+### 6. `^` (potência)
+
+**Exemplo:**
+
+```basic
+B^2
+```
+
+**Explicação:**
+
+* Eleva **B ao quadrado**.
+* Esse é o termo do discriminante da fórmula de Bhaskara.
+
+---
+
+### 7. Variáveis (`A`, `B`, `H`, `X1`, `X2`...)
+
+* São letras que armazenam valores temporariamente.
+* Você pode usar qualquer letra de **A até Z**.
+* Elas não precisam ser declaradas antes — basta usá-las.
+
+---
+
+## 📌 Teclas e símbolos úteis
+
+| Símbolo                       | Ação                          | Tecla da calculadora          |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| `→`                           | Armazenar valor               | `[SHIFT]` + `[RCL]`           |
+| `×`                           | Multiplicação                 | Tecla padrão                  |
+| `/`                           | Divisão                       | Tecla padrão                  |
+| `^`                           | Potência (ex: `2^3 = 8`)      | Tecla padrão                  |
+| `√`                           | Raiz quadrada                 | `[SHIFT]` + `x²`              |
+| `If`, `Then`, `Else`, `IfEnd` | Controle de fluxo (condições) | Acessíveis via `PRGM` > `CTL` |
+| `Lbl`, `Goto`                 | Saltos no programa            | Acessíveis via `PRGM` > `CTL` |
+
+---
+
+Se quiser, posso criar uma tabela com mais comandos ou mostrar como criar menus interativos também. Quer ver um exemplo com menu ou repetição?
